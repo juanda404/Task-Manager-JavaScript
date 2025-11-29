@@ -4,49 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO: Title & Description -->
     <title>Task Manager</title>
     <meta name="description" content="A simple, accessible, and SEO-friendly task manager to help you organize your daily activities.">
-    <!-- SEO: Open Graph for social media -->
+
     <meta property="og:title" content="Task Manager" />
     <meta property="og:description" content="A simple and accessible to-do application." />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
+
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div>
-            <button aria-label="Toggle light and dark theme">Toggle Theme</button>
+
+<body class="page">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__controls">
+            <button 
+                class="theme-toggle" 
+                aria-label="Toggle light and dark theme">
+                Toggle Theme
+            </button>
         </div>
-        <h1>Task Manager</h1>
+        <h1 class="header__title">Task Manager</h1>
     </header>
+    <!-- MAIN CONTENT -->
     <main>
-        <form id="task-form" aria-labelledby="form-title">
-            <h2 id="form-title" class="visually-hidden">Create New Task</h2>
-            <label for="task-input">New Task:</label>
+        <!-- FORM -->
+        <form id="task-form" class="task-form" aria-labelledby="task-form__title">
+            <h2 id="task-form__title" class="visually-hidden">Create New Task</h2>
+            <label for="task-input" class="task-form__label">New Task:</label>
             <input 
-                type="text" 
-                id="task-input" 
-                name="task" 
-                required 
+                type="text"
+                id="task-input"
+                name="task"
+                required
                 aria-required="true"
                 placeholder="Write your task here..."
+                class="task-form__input"
             >
-
-            <button type="submit">Add Task</button>
+            <button 
+                type="submit" 
+                class="task-form__button">
+                Add Task
+            </button>
         </form>
-        <ul role="list">
-            <li role="listitem">
-                Task Content 
-                <button class="delete-btn" aria-label="Delete task">❌</button>
-                <button class="edit-btn" aria-label="Edit task">✏️</button>
+        <!-- TASK LIST -->
+        <ul class="task-list" role="list">
+
+            <li class="task-item" role="listitem">
+                <span class="task-item__text">Task Content</span>
+
+                <button 
+                    class="task-item__btn task-item__btn--edit" 
+                    aria-label="Edit task">
+                    ✏️
+                </button>
+
+                <button 
+                    class="task-item__btn task-item__btn--delete" 
+                    aria-label="Delete task">
+                    ❌
+                </button>
             </li>
+
         </ul>
+
     </main>
+
+    <!-- FOOTER -->
     <footer class="footer" aria-label="Page Footer">
-         <p>&copy; 2025 Task Manager. Built with ❤️ by Juanda.</p>
-         <p class="footer-note">All tasks are stored locally in your browser.</p>
+        <p class="footer__note">
+            &copy; 2025 Task Manager. Built with  by Juan David. -- 
+            All tasks are stored locally in your browser.
+        </p>
     </footer>
+
     <script src="app.js"></script>
 </body>
 </html>
