@@ -1,6 +1,8 @@
 const taskForm = document.getElementById('task-form');
 const taskList = document.getElementById('task-list');
 
+loadTasks();
+
 taskForm.addEventListener('submit', (event)=>{
     event.preventDefault();
 
@@ -9,6 +11,7 @@ taskForm.addEventListener('submit', (event)=>{
     console.log('New Task:', taskText);
     if(taskText){
         taskList.append(createTaskElement(taskText));
+        storeTaskInLocalStorage(taskText);
         taskInput.value = '';
         taskInput.focus(); //manterner foco para add tasks
     }
@@ -40,7 +43,6 @@ function createButton(text, className, ariaLabel){
 
 //Delet tasks
 taskList.addEventListener("click",(event)=>{
-    console.log(event.target)
     if(event.target.classList.contains("task-item__btn--delete"))
     {
         deleteTask(event.target.parentElement);
@@ -60,4 +62,19 @@ function editTask(taskItem){
     if(newTask !== null){
         taskItem.firstChild.textContent = newTask;
     }
+}
+
+//Local Storage
+function storeTaskInLocalStorage(task){
+    const tasks = JSON.parse(localStorage.getItem("tasks") || "[]")
+    tasks.push(task);
+    localStorage.setItem("tasks",JSON.stringify(tasks));
+}
+
+//Cargar al momento de refresca la pagina el localstora injecta en el dom
+function loadTasks(){
+    const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+    tasks.forEach((task) =>{
+        taskList.appendChild(createTaskElement(task))
+    })
 }
