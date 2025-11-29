@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Title & Description -->
+    <title>Task Manager</title>
+    <meta name="description" content="A simple, accessible, and SEO-friendly task manager to help you organize your daily activities.">
+    <!-- SEO: Open Graph for social media -->
+    <meta property="og:title" content="Task Manager" />
+    <meta property="og:description" content="A simple and accessible to-do application." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <button aria-label="Toggle light and dark theme">Toggle Theme</button>
+        </div>
+        <h1>Task Manager</h1>
+    </header>
+    <main>
+        <form id="task-form" aria-labelledby="form-title">
+            <h2 id="form-title" class="visually-hidden">Create New Task</h2>
+            <label for="task-input">New Task:</label>
+            <input 
+                type="text" 
+                id="task-input" 
+                name="task" 
+                required 
+                aria-required="true"
+                placeholder="Write your task here..."
+            >
+
+            <button type="submit">Add Task</button>
+        </form>
+        <ul role="list">
+            <li role="listitem">
+                Task Content 
+                <button class="delete-btn" aria-label="Delete task">❌</button>
+                <button class="edit-btn" aria-label="Edit task">✏️</button>
+            </li>
+        </ul>
+    </main>
+    <footer class="footer" aria-label="Page Footer">
+         <p>&copy; 2025 Task Manager. Built with ❤️ by Juanda.</p>
+         <p class="footer-note">All tasks are stored locally in your browser.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
