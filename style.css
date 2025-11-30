@@ -54,6 +54,11 @@ main {
   overflow-y: auto; /* Permite scroll SOLO aquí */
   padding-bottom: 2rem;
 }
+.container{
+   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
 /* ------------------------------
    HEADER
