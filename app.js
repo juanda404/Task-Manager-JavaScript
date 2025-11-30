@@ -50,17 +50,19 @@ taskList.addEventListener("click",(event)=>{
         editTask(event.target.parentElement);
     }
 });
-
+//Delet task
 function deleteTask(taskItem){
     if(confirm("Are you sure?")){
         taskItem.remove();
+        updateLocalStorage();
     }
 }
-
+//Edit task
 function editTask(taskItem){
     const newTask = prompt("Edit the task", taskItem.firstChild.textContent)
     if(newTask !== null){
         taskItem.firstChild.textContent = newTask;
+        updateLocalStorage();
     }
 }
 
@@ -78,3 +80,30 @@ function loadTasks(){
         taskList.appendChild(createTaskElement(task))
     })
 }
+
+//Editar y guardar en localstorage
+function updateLocalStorage(){
+    const tasks = Array.from(taskList.querySelectorAll("li")).map( (li) => li.firstChild.textContent);
+    localStorage.setItem("tasks",JSON.stringify(tasks));
+
+}
+
+//THEME DAK -LIGHT
+const themeToggleButton = document.getElementById("toggle-theme-btn");
+
+const currentTheme = localStorage.getItem("theme");
+console.log();
+
+themeToggleButton.addEventListener("click", ()=>{
+    document.body.classList.toggle("dark-theme");
+
+    const theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+
+    localStorage.setItem("theme",theme);
+});
+
+if(currentTheme === "dark")
+{
+    document.body.classList.add("dark-theme");
+}
+

@@ -206,6 +206,24 @@ main {
 }
 
 /* ------------------------------
+   DARK THEME
+--------------------------------*/
+/* -------------------------------------
+   VARIABLES – DARK MODE
+--------------------------------------*/
+body.dark-theme {
+  --color-bg: #1c1c1e;
+  --color-bg-soft: #2c2c2e;
+  --color-card: #2c2c2e;
+  --color-text: #f5f5f7;
+  --color-text-light: #98989d;
+  --color-primary: #0a84ff;
+  --color-border: #3a3a3c;
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ------------------------------
    ANIMATIONS
 --------------------------------*/
 @keyframes fadeIn {
