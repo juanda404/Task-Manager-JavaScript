@@ -171,8 +171,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Juan David Santamaria**
 
 - Email: [juandavidsantamariag@gmail.com](mailto:juandavidsantamariag@gmail.com)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- GitHub: [juanda404](https://github.com/juanda404)
+- LinkedIn: [in/juan-david-santamaria](https://www.linkedin.com/in/juan-david-santamaria/)
 
 ## 🙏 Acknowledgments
 
