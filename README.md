@@ -2,7 +2,9 @@
 
 A simple, accessible, and modern task management application built with vanilla JavaScript, HTML, and CSS. Organize your daily tasks with an intuitive interface and persistent local storage.
 
-![Task Manager Preview](assets/img/preview.png)
+(<img width="516" height="374" alt="image" src="https://github.com/user-attachments/assets/2995e5d0-d762-4df5-b315-c9d666e3afba" />
+
+)
 
 ## ✨ Features
 
