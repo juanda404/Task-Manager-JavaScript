@@ -2,7 +2,9 @@
 
 A simple, accessible, and modern task management application built with vanilla JavaScript, HTML, and CSS. Organize your daily tasks with an intuitive interface and persistent local storage.
 
-![Task Manager Preview](assets/img/preview.png)
+(<img width="516" height="374" alt="image" src="https://github.com/user-attachments/assets/2995e5d0-d762-4df5-b315-c9d666e3afba" />
+
+)
 
 ## ✨ Features
 
@@ -17,7 +19,7 @@ A simple, accessible, and modern task management application built with vanilla 
 
 ## 🚀 Demo
 
-[Live Demo](#) *(Add your deployment link here)*
+[Live Demo](#) *(https://taskmanagerjavas.netlify.app/)*
 
 ## 🛠️ Technologies Used
 
@@ -51,7 +53,7 @@ taskmanager/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/taskmanager.git
+git clone https://github.com/juanda404/taskmanager.git
 ```
 
 2. Navigate to the project directory:
@@ -171,8 +173,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Juan David Santamaria**
 
 - Email: [juandavidsantamariag@gmail.com](mailto:juandavidsantamariag@gmail.com)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- GitHub: [juanda404](https://github.com/juanda404)
+- LinkedIn: [in/juan-david-santamaria](https://www.linkedin.com/in/juan-david-santamaria/)
 
 ## 🙏 Acknowledgments
 
